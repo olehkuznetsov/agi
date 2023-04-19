@@ -39,8 +39,8 @@ set BIN_DIR=%2\bazel-bin
 if exist "%BUILD_OUT%\dist" (
   rmdir /Q /S "%BUILD_OUT%\dist"
 )
-
-mkdir "%BUILD_OUT%\dist\agi"
+  
+mkdir -p "%BUILD_OUT%\dist\agi"
 pushd "%BUILD_OUT%\dist"
 
 awk -F= 'BEGIN {major=0; minor=0; micro=0}^
